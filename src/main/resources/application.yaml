@@ -1,0 +1,12 @@
+context.initializer.classes: com.github.jbibro.videorentalstore.BeansInitializer
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/videos
+---
+spring:
+  profiles: docker
+  data:
+    mongodb:
+      uri: mongodb://mongo:27017/videos

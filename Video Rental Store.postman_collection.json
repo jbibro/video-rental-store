@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "0307be97-67b8-4c7d-961c-11100f4bbbf0",
+		"name": "Video Rental Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Films",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{uri}}/api/films/",
+					"host": [
+						"{{uri}}"
+					],
+					"path": [
+						"api",
+						"films",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{uri}}/api/customers",
+					"host": [
+						"{{uri}}"
+					],
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rentals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{uri}}/api/rentals",
+					"host": [
+						"{{uri}}"
+					],
+					"path": [
+						"api",
+						"rentals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerId\": \"7b49e3cc-baa6-1094-03a3-23e30a11af90\",\n    \"films\": [\n        {\n            \"id\": \"a4457073-cadf-ccd0-ab79-3917c485d894\",\n            \"days\": 3\n        },\n        {\n            \"id\": \"d1483e1c-0f8c-9fad-ef8c-e7994ce8009b\",\n            \"days\": 2\n        },        \n        {\n            \"id\": \"d1483e1c-0f8c-9fad-ef8c-e7994ce8009b\",\n            \"days\": 12\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{uri}}/api/rentals",
+					"host": [
+						"{{uri}}"
+					],
+					"path": [
+						"api",
+						"rentals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": [\"10b23bbf-de91-48bc-9ed3-e08e64017f14\"]\n}"
+				},
+				"url": {
+					"raw": "{{uri}}/api/rentals/99454ac9-65eb-496b-a55f-4e52ef0e256d",
+					"host": [
+						"{{uri}}"
+					],
+					"path": [
+						"api",
+						"rentals",
+						"99454ac9-65eb-496b-a55f-4e52ef0e256d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Film",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Snatch\",\n\t\"type\": \"OLD\"\n}"
+				},
+				"url": {
+					"raw": "{{uri}}/api/films",
+					"host": [
+						"{{uri}}"
+					],
+					"path": [
+						"api",
+						"films"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"John\"\n}"
+				},
+				"url": {
+					"raw": "{{uri}}/api/customers",
+					"host": [
+						"{{uri}}"
+					],
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{uri}}/api/customers/7b49e3cc-baa6-1094-03a3-23e30a11af90",
+					"host": [
+						"{{uri}}"
+					],
+					"path": [
+						"api",
+						"customers",
+						"7b49e3cc-baa6-1094-03a3-23e30a11af90"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "5d60f88e-9535-4bd1-9359-9f88dc19ef2d",
+			"key": "uri",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

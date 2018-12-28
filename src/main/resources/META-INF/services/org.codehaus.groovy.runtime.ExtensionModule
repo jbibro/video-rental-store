@@ -1,0 +1,3 @@
+moduleName=kotlin-extension-functions
+moduleVersion=1.0.0
+extensionClasses=com.github.jbibro.videorentalstore.rental.data.RentalKt
